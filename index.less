@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  background-color: #000;
+}
+
+
+.container {
+  background-color: red;
+  width: 1150px;
+  margin: 0 auto;
+
+  @media (min-width: 576px) {
+    width: 600px;
+  }
+
+  @media (min-width: 768px) {
+    width: 650px;
+  }
+
+  @media (min-width: 992px) {
+    width: 900px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1150px;
+  }
+}
+
+header {
+  // background-color: silver;
+  width: 100%;
+
+  .header {
+    background-color: #AADAFF;
+    height: 30px;
+    margin: 0 auto 10px;
+    padding: 10px 0;
+
+    @media (min-width: 576px) {
+      width: 600px;
+    }
+
+    @media (min-width: 768px) {
+      width: 650px;
+    }
+
+    @media (min-width: 992px) {
+      width: 900px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 1150px;
+    }
+
+    h3 {
+      line-height: 30px;
+      font-size: 30px;
+    }
+  }
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  @media (min-width: 576px) {
+    width: 600px;
+  }
+
+  @media (min-width: 768px) {
+    width: 650px;
+  }
+
+  @media (min-width: 992px) {
+    width: 900px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1150px;
+  }
+
+  &.justify-content-center {
+    justify-content: center;
+  }
+}
+
+.col {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 400px;
+  transition: 0.5s all ease;
+}
+
+.col-xl-1 {
+  background-color: #ca002e;
+  margin: 0 5px 0 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 180px;
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    flex-grow: 1;
+  }
+
+  @media (min-width: 992px) {
+    flex-grow: 1;
+  }
+
+  @media (min-width: 1200px) {
+    flex-grow: 1;
+  }
+
+  .buttonContainer {
+
+    div {
+      height: 50px;
+
+      button {
+        // background-color: #000;
+        border: 0;
+        padding: 2px 4px;
+        border-radius: 5px;
+        margin: 0 10px 10px;
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+.col-xl-2 {
+  // background-color: blue;
+  margin: 0 0 0 5px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    flex-grow: 9;
+  }
+
+  @media (min-width: 992px) {
+    flex-grow: 8;
+  }
+
+  @media (min-width: 1200px) {
+    flex-grow: 8;
+  }
+}
+
+#test {
+  // background-color: gray;
+  height: 600px;
+  margin: 0 auto;
+
+  @media (min-width: 576px) {
+    width: 600px;
+  }
+
+  @media (min-width: 768px) {
+    width: 650px;
+  }
+
+  @media (min-width: 992px) {
+    width: 900px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1150px;
+  }
+}
+
+
+// 下面是 list 的 style
+@breakpoint-alpha: 480px;
+
+#places {
+  margin: 1em auto;
+  min-width: 300px;
+
+  tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    display: none;
+  }
+
+  td {
+    display: block;
+
+    &:first-child {
+      padding-top: .5em;
+    }
+
+    &:last-child {
+      padding-bottom: .5em;
+    }
+
+    &:before {
+      content: attr(data-th)": ";
+      font-weight: bold;
+      width: 6.5em;
+      display: inline-block;
+
+      @media (min-width: @breakpoint-alpha) {
+        display: none;
+      }
+    }
+  }
+
+  th,
+  td {
+    text-align: left;
+
+    @media (min-width: @breakpoint-alpha) {
+      display: table-cell;
+      padding: .25em .5em;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+
+#places {
+  background: #34495E;
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden;
+
+  tr {
+    border-color: lighten(#34495E, 10%);
+  }
+
+  th,
+  td {
+    margin: .5em 1em;
+
+    @media (min-width: @breakpoint-alpha) {
+      padding: 1em !important;
+    }
+  }
+
+  th,
+  td:before {
+    color: #dd5;
+  }
+}

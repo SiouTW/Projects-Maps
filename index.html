@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Maps</title>
+  <link rel="stylesheet" href="./index.css">
+  <!-- google maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXIghSZn88DA4zffJ6X7CiC4aH3REV6ns&libraries=places"
+    defer></script>
+  <script type="text/javascript" src="./index.js" defer></script>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="header">
+      <h3>Google Maps查詢半徑500公尺附近的餐廳</h3>
+    </div>
+  </header>
+
+  <div class="row">
+    <div class="col col-xl-1 red">
+
+      <div class="buttonContainer">
+        <div>
+          <button id='priceHighToLow'>價格由高到低</button>
+          <button id='priceLowToHigh'>價格由低到高</button>
+        </div>
+
+        <div>
+          <button id='highToLow'>分數由高到低</button>
+          <button id='lowToHigh'>分數由低到高</button>
+        </div>
+
+        <div>
+          <button id='nameHighToLow'>筆畫由多到少</button>
+          <button id='nameLowToHigh'>筆畫由少到多</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col col-xl-2 blue" id="map"></div>
+  </div>
+
+  <div id="test">
+
+    <table id="places">
+      <tr>
+        <th>店名</th>
+        <th>使用者評價 (0~5) </th>
+        <th>消費單價 (0~4)<br>0代表查不到</th>
+        <th>是否營業中</th>
+        <th>地址</th>
+      </tr>
+    </table>
+  </div>
+
+</body>
+
+</html>
